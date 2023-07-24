@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script
+      src="https://kit.fontawesome.com/584509c2ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="full-date">
+          <span class="day" id="day"> </span
+          ><span class="date" id="date"> </span>
+        </div>
+        <div class="temperature" id="temperature"></div>
+        <div class="city">
+          <i class="fa-solid fa-location-dot"> </i>
+          <span id="city"></span>
+        </div>
+        <ul>
+          <li id="time"></li>
+          <li id="description"></li>
+        </ul>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city"
+            class="search-input"
+            id="search-input"
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
+          <input
+            type="submit"
+            value="Current"
+            class="current-button"
+            id="current-button"
+          />
+        </form>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

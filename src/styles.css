@@ -1,0 +1,84 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+}
+
+form {
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.full-date {
+  text-align: center;
+}
+
+.city {
+  text-align: center;
+  display: block;
+}
+
+.day {
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.temperature {
+  text-align: center;
+  font-size: 50px;
+
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+.city,
+.description {
+  font-size: 20px;
+}
+
+.search-input {
+  padding: 20px;
+  width: 250px;
+  height: 10px;
+  margin-right: 25px;
+}
+
+.search-button,
+.current-button {
+  line-height: 7px;
+  padding: 15px 25px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.search-button:hover,
+.current-button:hover {
+  background-color: #fff;
+  color: navy;
+}
+.search-button {
+  background-color: #0047ab;
+  color: #fff;
+}
+
+.current-button {
+  background-color: #26619c;
+  color: #fff;
+}
