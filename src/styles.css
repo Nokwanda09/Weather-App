@@ -12,6 +12,9 @@ form {
   padding: 20px;
 }
 
+ul div::first-letter {
+  text-transform: capitalize;
+}
 .card {
   width: 60%;
   display: block;
