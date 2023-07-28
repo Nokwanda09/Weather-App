@@ -87,12 +87,4 @@ function getLocation(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showCurrentWeather(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getLocation);
-}
-
-let currentButton = document.querySelector("#current-button");
-currentButton.addEventListener("click", showCurrentWeather);
-
 displayDefaultCity();
