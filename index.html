@@ -32,23 +32,20 @@
         <ul>
           <li id="time"></li>
           <div class="row">
-            <div class="col-4" id="description">
-              <img
-                src="https://www.pngwing.com/en/search?q=sun+Icon"
-                alt="Description icon"
-                width="100px"
-              />
+            <div class="col-4" id="description"></div>
+            <div class="col-4">Humidity: <span id="humidity"></span>%</div>
+            <div class="col-4">
+              Wind speed: <span id="wind-speed"></span>km/h
             </div>
-            <div class="col-4">Humidity: 93%</div>
-            <div class="col-4">Wind speed: 2km/h</div>
           </div>
         </ul>
-        <form>
+        <form id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             class="search-input"
             id="search-input"
+            autocomplete="off"
           />
           <input
             type="submit"
