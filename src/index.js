@@ -86,7 +86,27 @@ function searchCity(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector(".forecast");
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `<div class="weather-forecast">
+            <div class="weather-forecast-day">
+              <div class="day-date">${day}</div>
+              <div class="day-icon">icon</div>
+              <div class="day-temp">15° 9°</div>
+            </div>
+          </div>`;
+  });
+
+  forecast.innerHTML= forecastHTML;
+}
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCity);
 
 displayDefaultCity();
+
+displayForecast();

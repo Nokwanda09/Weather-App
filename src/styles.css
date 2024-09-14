@@ -101,7 +101,8 @@ img {
 
 .weather-forecast{
   display: inline-block;
-  margin: 20px;
+  margin: 30px;
+  padding: 5px;
 }
 
 .forecast{
