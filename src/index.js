@@ -44,6 +44,7 @@ if (munites < 10) {
 } else {
   timeOnScreen.innerHTML = `${hours}:${munites}`;
 }
+
 function displayDefaultCity() {
   let defaultCity = "Durban";
   let city = document.querySelector("#city");

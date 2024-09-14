@@ -23,7 +23,7 @@ img {
 }
 
 .card {
-  width: 60%;
+  width: 70%;
   display: block;
   margin: 0 auto;
   padding: 30px;
@@ -91,4 +91,22 @@ img {
 .current-button {
   background-color: #26619c;
   color: #fff;
+}
+
+.day-date{
+  font-weight: bold;
+  color: #b3b3bb;
+}
+
+
+.weather-forecast{
+  display: inline-block;
+  margin: 20px;
+}
+
+.forecast{
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px #eaeaf1 solid;
+  align-content: center;
 }
