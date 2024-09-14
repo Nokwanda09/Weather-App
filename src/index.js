@@ -57,6 +57,7 @@ function displayDefaultCity() {
 }
 
 function showTemperature(response) {
+  // console.log(response)
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let temperature = document.querySelector("#temperature");
@@ -73,6 +74,9 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`
   );
+
+  // console.log(response.data.name);
+  getForecast(response.data.name);
 }
 
 function searchCity(event) {
@@ -83,10 +87,11 @@ function searchCity(event) {
   let apiKey = "8123783b747891cdafd883d799046f7c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showTemperature);  //axios used to get information from the url
 }
 
-function displayForecast() {
+function displayForecast(response) { //response parameter from axios
+  // console.log(response)
   let forecast = document.querySelector(".forecast");
   let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
   let forecastHTML = "";
@@ -104,9 +109,18 @@ function displayForecast() {
   forecast.innerHTML= forecastHTML;
 }
 
+function getForecast(city){
+  let apiKey = "3b3145e24a3caa0fd97c426dte1561fo";
+  let apiUrl =
+    `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    
+    axios.get(apiUrl).then(displayForecast);
+    console.log(apiUrl)
+}
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCity);
 
 displayDefaultCity();
-
+// getForecast("Durban");
 displayForecast();
