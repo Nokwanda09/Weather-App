@@ -20,26 +20,6 @@
   <body>
     <div class="container">
       <div class="card">
-        <div class="full-date">
-          <span class="day" id="day"> </span
-          ><span class="date" id="date"> </span>
-        </div>
-        <img src="" alt="" id="icon" />
-        <div class="temperature"><span id="temperature"></span>°C</div>
-        <div class="city">
-          <i class="fa-solid fa-location-dot"> </i>
-          <span id="city"></span>
-        </div>
-        <ul>
-          <li id="time"></li>
-          <div class="row">
-            <div class="col-4" id="description"></div>
-            <div class="col-4">Humidity: <span id="humidity"></span>%</div>
-            <div class="col-4">
-              Wind speed: <span id="wind-speed"></span>km/h
-            </div>
-          </div>
-        </ul>
         <form id="search-form">
           <input
             type="search"
@@ -56,6 +36,39 @@
           />
         </form>
 
+        <ul class="general-info">
+          <li>
+            <div class="full-date">
+              <span class="day" id="day"> </span
+              ><span class="date" id="date"> </span>
+            </div>
+            <div class="city">
+              <i class="fa-solid fa-location-dot"> </i>
+              <span id="city"></span>
+            </div>
+            <ul>
+              <li id="time"></li>
+            </ul>
+          </li>
+          <li>
+            <br />
+          </li>
+        </ul>
+
+        <ul class="weather-condition">
+          <li>
+            <img src="" alt="" id="icon" />
+            <span class="temperature"><span id="temperature"></span>°C</span>
+          </li>
+          <li>
+            <ul class="condition">
+              <li id="description"></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind speed: <span id="wind-speed"></span>km/h</li>
+            </ul>
+          </li>
+        </ul>
+
         <section class="forecast"></section>
       </div>
 
@@ -63,7 +76,8 @@
         <a href="https://github.com/Nokwanda09/Weather-App" target="_blank">
           Open source code</a
         >
-        by Nokwanda Mpungose hosted on <a href="">Netlify</a></small
+        by Nokwanda Mpungose hosted on
+        <a href="https://roaring-khapse-0b7fe8.netlify.app/">Netlify</a></small
       >
     </div>
 

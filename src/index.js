@@ -117,7 +117,6 @@ function displayForecast(response) { //response parameter from axios]
   let forecastHTML = "";
 
   days.forEach(function (day, index) {
-    if (index < 5)
       forecastHTML =
         forecastHTML +
         `<div class="weather-forecast">

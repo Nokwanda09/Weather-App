@@ -9,17 +9,27 @@ ul {
 }
 
 form {
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+input[type=search]{
+  border: none;
+  border-bottom: 2px solid #b3b3bb;
+  background-color: rgb(234, 234, 247);
 }
 
 ul div::first-letter {
   text-transform: capitalize;
 }
 
+#icon {
+  /* display: block; */
+  /* margin: 0 auto; */
+  width: 80px;
+}
+
 img {
-  display: block;
-  margin: 0 auto;
   width: 50px;
 }
 
@@ -32,11 +42,11 @@ img {
 }
 
 .full-date {
-  text-align: center;
+  text-align: left;
 }
 
 .city {
-  text-align: center;
+  text-align: left;
   display: block;
 }
 
@@ -52,11 +62,10 @@ img {
 }
 
 .temperature {
-  text-align: center;
+  text-align: right;
   font-size: 50px;
-
   padding: 0px;
-  margin: 0px;
+  margin: 100px 0 0 0;
   border: 0px;
 }
 
@@ -82,11 +91,11 @@ img {
 
 .search-button:hover,
 .current-button:hover {
-  background-color: #fff;
-  color: navy;
+  background-color: #e8e2f8;
+  color: rgb(187, 187, 216);
 }
 .search-button {
-  background-color: #0047ab;
+  background-color: rgb(187, 187, 216);
   color: #fff;
 }
 
@@ -95,22 +104,44 @@ img {
   color: #fff;
 }
 
-.day-date{
+.day-date {
   font-weight: bold;
   color: #b3b3bb;
 }
 
-
-.weather-forecast{
+.weather-forecast {
   display: inline-block;
   margin: 30px;
   padding: 5px;
-  
 }
 
-.forecast{
+.forecast {
   margin-top: 30px;
   padding: 20px;
   border-top: 1px #dcdcf3 solid;
   align-content: center;
 }
+
+.condition {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.condition li {
+  margin: 10px;
+  text-align: right;
+}
+
+.general-info{
+  display: inline-flex;
+}
+
+.weather-condition{
+  float: right;
+}
+
+#time{
+  text-align: left;
+}
+
