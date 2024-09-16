@@ -25,7 +25,7 @@ ul div::first-letter {
 
 #icon {
   /* display: block; */
-  /* margin: 0 auto; */
+  margin-top: -20px;
   width: 80px;
 }
 
