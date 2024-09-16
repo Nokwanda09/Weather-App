@@ -111,9 +111,7 @@ function formatDay(timestamp){
   return days[date.getDay()]
 }
 
-function displayForecast(response) {
-  //response parameter from axios]
-  console.log(response.data);
+function displayForecast(response) { //response parameter from axios]
   let forecast = document.querySelector(".forecast");
   let days = response.data.daily;
   let forecastHTML = "";
