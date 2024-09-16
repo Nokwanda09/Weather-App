@@ -52,7 +52,6 @@ function displayDefaultCity() {
 
   let apiKey = "8123783b747891cdafd883d799046f7c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(showTemperature);
 }
 
@@ -75,7 +74,6 @@ function showTemperature(response) {
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`
   );
 
-  // console.log(response.data.name);
   getForecast(response.data.name);
 }
 
@@ -87,40 +85,60 @@ function searchCity(event) {
   let apiKey = "8123783b747891cdafd883d799046f7c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(showTemperature);  //axios used to get information from the url
+  axios.get(apiUrl).then(showTemperature); //axios used to get information from the url
 }
 
-function displayForecast(response) { //response parameter from axios
-  // console.log(response)
+function getForecast(city) {
+  let apiKey = "3b3145e24a3caa0fd97c426dte1561fo";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+  // console.log(apiUrl);
+}
+
+function formatDay(timestamp){
+  let date = new Date(timestamp*1000);
+  let days = [
+    "Sun",
+    "Mon",
+    "Tues",
+    "Wed",
+    "Thurs",
+    "Fri",
+    "Sat",
+  ];
+
+  return days[date.getDay()]
+}
+
+function displayForecast(response) {
+  //response parameter from axios]
+  console.log(response.data);
   let forecast = document.querySelector(".forecast");
-  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+  let days = response.data.daily;
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML = forecastHTML + `<div class="weather-forecast">
+  days.forEach(function (day, index) {
+    if (index < 5)
+      forecastHTML =
+        forecastHTML +
+        `<div class="weather-forecast">
             <div class="weather-forecast-day">
-              <div class="day-date">${day}</div>
-              <div class="day-icon">icon</div>
-              <div class="day-temp">15° 9°</div>
+              <div class="day-date">${formatDay(day.time)}</div>
+              <img src=${day.condition.icon_url} </>
+              <div class="day-temp"> <strong>${Math.ceil(
+                day.temperature.maximum
+              )}°</strong>  ${Math.ceil(day.temperature.minimum)}°</div>
             </div>
           </div>`;
   });
 
-  forecast.innerHTML= forecastHTML;
-}
-
-function getForecast(city){
-  let apiKey = "3b3145e24a3caa0fd97c426dte1561fo";
-  let apiUrl =
-    `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    
-    axios.get(apiUrl).then(displayForecast);
-    console.log(apiUrl)
+  forecast.innerHTML = forecastHTML;
 }
 
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCity);
 
 displayDefaultCity();
-// getForecast("Durban");
+// getForecast("Durban")
 displayForecast();
