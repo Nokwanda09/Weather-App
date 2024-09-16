@@ -14,6 +14,7 @@ form {
 }
 
 input[type=search]{
+  width: 500px;
   border: none;
   border-bottom: 2px solid #b3b3bb;
   background-color: rgb(234, 234, 247);
