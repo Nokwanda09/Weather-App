@@ -1,5 +1,6 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(217, 217, 236);
 }
 ul {
   text-align: center;
@@ -27,6 +28,7 @@ img {
   display: block;
   margin: 0 auto;
   padding: 30px;
+  background-color: rgb(234, 234, 247);
 }
 
 .full-date {
@@ -109,6 +111,6 @@ img {
 .forecast{
   margin-top: 30px;
   padding: 20px;
-  border-top: 1px #eaeaf1 solid;
+  border-top: 1px #dcdcf3 solid;
   align-content: center;
 }
